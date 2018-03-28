@@ -1,0 +1,115 @@
+body {
+	background-color: #f5f5f5;
+	font-family: 'Rockwell', serif;
+}
+
+.navbar {
+	font-family: 'Rockwell', sans-serif;
+	text-transform: uppercase;
+}
+
+.navbar-default {
+	background-color: #65737e;
+	padding-bottom: 5px;
+}
+
+.navbar-nav > li > a {
+		color: #fff;
+  
+}
+
+.navbar-nav>li> a:hover {
+			color: #20B2AA;
+			transition: 0.5s;
+}
+
+.navbar-header .navbar-brand {
+			color: #fff;
+			letter-spacing: 1.4px;
+  
+}
+.navbar-header .navbar-brand:hover {
+				color: #20B2AA;
+				transition: 0.5s;
+}
+
+	.dropdown-menu > li > a:hover {
+		background-color: #20B2AA;
+		color: #fff;
+	}
+
+	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+		background-color: #20B2AA;
+		color: #fff;	
+	}
+
+.dropdown-menu > .active > a {
+	background-color: #20B2AA;
+	color: #fff;
+}
+
+/*.report_info{*/
+/*	width: 400px;*/
+/*	height: 350px;*/
+/*	position: absolute;*/
+/*	top: 70px;*/
+/*    left: 15px;*/
+/*    margin: auto;*/
+/*    float:left;*/
+/*}*/
+
+/*.report_text{*/
+/*	width: 850px;*/
+/*	position: absolute;*/
+/*	top: 70px;*/
+/*    right: 45px;*/
+/*    margin: auto;*/
+/*    float:left;*/
+	
+/*}*/
+
+/*.patient_info{*/
+/*	width: 400px;*/
+/*	height: 300px;*/
+/*	position: absolute;*/
+/*	top: 70px;*/
+/*    left: 15px;*/
+/*    margin: auto;*/
+/*}*/
+
+/*.patient_reports{*/
+/*	width: 850px;*/
+/*	position: absolute;*/
+/*	top: 70px;*/
+/*    right: 45px;*/
+/*    margin: auto;*/
+/*}*/
+
+
+/*td{*/
+/*	font-size:15px;*/
+/*	overflow: hidden;*/
+/*   	white-space: nowrap;*/
+/*}*/
+
+/*.new-patient-form {*/
+/*	width:700px;*/
+/*	height:565px;*/
+/*	position: absolute;*/
+/*	top: 65px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin: auto;*/
+/*}*/
+
+/*.new-report-form{*/
+/*	width:700px;*/
+/*	height:565px;*/
+/*	position: absolute;*/
+/*	top: 65px;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin: auto;*/
+	
+/*}*/
+

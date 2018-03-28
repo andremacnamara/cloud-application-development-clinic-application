@@ -1,0 +1,67 @@
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Phone</th>
+                <th>Ailment</th>
+                <th>Apointment</th>
+                <th>Status</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><%= @patient.name %></td>
+                    <td><%= @patient.age %></td>
+                    <td><%= @patient.phone %></td>
+                    <td><%= @patient.ailment %></td>
+                    <td><%= @patient.apointment %></td>
+                    <td><%= @patient.status %></td>
+                    <td><%= link_to "Back", patients_path %></td>
+                    <td><%= link_to "Edit", edit_patient_path(@patient)%></td>
+                    <td><%= link_to( "Delete", patient_path(@patient), data: {confirm: "Are you sure you want to delete: #{@patient.name}?"},method: :delete) %></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card" align="center">
+            <div class="card-title">
+                Past Visits
+            </div>
+	        <% if @patient.reports.count ==0 %>
+		        <center><h1>This patient has no medical reports on file</h1></center>
+	        <% else %>
+	        <div class="card-body">
+		    <table class="table table table-bordered table-striped">
+    			<thead>
+    				<tr>
+    			    	<th>Date</th>
+    			    	<th/>
+    			  	</tr>
+    			</thead>
+    			<tbody>
+    				<% @patient.reports.each do |report|%>
+    					<tr>
+    						<td><%= report.date %></td>
+    						<td><%= link_to "View Report", patient_report_path(report.patient.id,report.id),class: "button_one" %></td>
+    						
+    					</tr>
+    				<% end %>
+    			</tbody>
+		    </table>
+	    <% end %>
+    	<% if signed_in? %>
+    	    <% if @patient.id == current_user.id %>
+    		    <%= link_to "Add Visit Report", new_patient_report_path(@patient),class: "button_one" %>
+    		<% end %>
+    	<% end %>
+	    </div>
+    </div>
+</div>

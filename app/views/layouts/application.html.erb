@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Smart Health Application</title>
+		<%= csrf_meta_tags %>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+	    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+	</head>
+	<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <%= link_to "Smart Health", root_path, class: "navbar-brand" %>
+
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <%= link_to "Register Doctor", sign_up_path, class: "nav-link" %>
+    </li>
+
+    <% if signed_in? %> 
+      <li class="nav-item"><%= link_to "Sign out", sign_out_path, method: :delete, class: "nav-link" %></li>
+    <% else %> 
+      <li class="nav-item"><%= link_to "Login", sign_in_path, class: "nav-link" %></li>
+    <% end %>
+  </ul>
+
+
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by Condition</a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <a class="dropdown-item" href="#">Action</a>
+      </div>
+    </li>
+
+    <% if signed_in? %> 
+      <li class="nav-item"><%= link_to "Your Patients", patients_path(user_id: current_user.id), class: "nav-link" %></li>
+    <% else %> 
+      <li class="nav-item"><%= link_to "Add Patient", new_patient_path, class: "nav-link" %></li>
+    <% end %>
+  </ul>
+</nav>
+ 
+  	<p class="notice"><%= notice %></p>
+  	<p class="alert"><%= alert %></p>
+    <%= yield %>
+  </body>
+</html>
