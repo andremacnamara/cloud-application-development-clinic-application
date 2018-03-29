@@ -1,19 +1,17 @@
-<h1>Dr Ross Kings Patients</h1>
+<div class="container-fluid">
+    <div class="text-lead text-center">
+        <h1 class="mb-3">Dr Ross Kings Patients</h1>
+        <%= link_to "New Patient", new_patient_path %>
+        <%= form_tag patients_path, method: :get do%>
+            <p>
+                <%= text_field_tag :query, params[:query], class: "mt-3" %>
+                <%= submit_tag "Search", name: nil,class: "edit-button" %>
+            </p>
+        <% end %>
+    </div>
 
-
-<div>
-    <%= link_to "New Patient", new_patient_path %>
-</div>
-
-<div class="row">
-    <%= form_tag patients_path, method: :get do%>
-        <p>
-        <%= text_field_tag :query, params[:query] %>
-        <%= submit_tag "Search", name: nil %>
-        </p>
-    <% end %>
     <div class="col-md-12">
-        <table class="table">
+        <table class="table patient-list">
             <thead>
               <tr>
                 <th>Name</th>
@@ -42,4 +40,5 @@
             </tbody>
         </table>
     </div>
+</div>
 </div>
