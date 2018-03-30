@@ -42,6 +42,7 @@
         			<thead>
         				<tr>
         			    	<th>Date</th>
+        			    	<th>Title</th>
         			    	<th/>
         			  	</tr>
         			</thead>
@@ -49,17 +50,17 @@
         				<% @patient.reports.each do |report|%>
         					<tr>
         						<td><%= report.date %></td>
+        						<td><%= report.title %></td>
         						<td><%= link_to "View Report", patient_report_path(report.patient.id,report.id),class: "button_one" %></td>
-        						
+        					    <td><%= link_to "Edit", edit_patient_report_path(report.patient.id,report.id),class: "button_one" %></td>
+			                    <td><%= link_to "Delete", patient_report_path(report.patient.id,report.id), method: :delete, data: {confirm: "Are you sure?"},class: "button_one" %></td>
         					</tr>
         				<% end %>
         			</tbody>
     		    </table>
     	    <% end %>
         	<% if signed_in? %>
-        	    <% if @patient.id == current_user.id %>
-        		    <%= link_to "Add Visit Report", new_patient_report_path(@patient),class: "button_one" %>
-        		<% end %>
+                <%= link_to "Add Visit Report", new_patient_report_path(@patient),class: "button_one" %>
         	<% end %>
     	    </div>
         </div>

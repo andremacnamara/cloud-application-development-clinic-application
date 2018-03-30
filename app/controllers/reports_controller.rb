@@ -41,7 +41,7 @@ class ReportsController < ApplicationController
 	private
 
 		def report_params
-			params.require(:report).permit(:date, :report)
+			params.require(:report).permit(:date, :report, :title)
 		end
 
 		def find_patient

@@ -87,6 +87,11 @@ body {
 	font-style: italic;
 }
 
+.show-table tbody td a:hover {
+	color: tomato;
+	font-weight: 500;
+	font-style: bold;
+}
 
 .report-table {
 	margin: 0 auto; 

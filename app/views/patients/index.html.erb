@@ -11,34 +11,38 @@
     </div>
 
     <div class="col-md-12">
-        <table class="table patient-list">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>Phone</th>
-                <th>Ailment</th>
-                <th>Apointment</th>
-                <th>Status</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-                <% @patients.each do |patient| %>
-                    <tr>
-                        <td><%= link_to patient.name, patient_path(patient) %></td>
-                        <td><%= patient.age %></td>
-                        <td><%= patient.phone %></td>
-                        <td><%= patient.ailment %></td>
-                        <td><%= patient.apointment %></td>
-                        <td><%= patient.status %></td>
-                        <td><%= link_to "Back", patients_path %></td>
-                        <td><%= link_to "Edit", edit_patient_path(patient)%></td>
-                        <td><%= link_to( "Delete", patient_path(patient), data: {confirm: "Are you sure you want to delete: #{patient.name}?"},method: :delete) %></td>
-                    </tr>
-                <% end %>
-            </tbody>
-        </table>
+        <% if @patients.count ==0 %>
+				<center><h3>There are no patients</h3></center>
+		<% else %>
+            <table class="table patient-list">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Phone</th>
+                    <th>Ailment</th>
+                    <th>Apointment</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <% @patients.each do |patient| %>
+                        <tr>
+                            <td><%= link_to patient.name, patient_path(patient) %></td>
+                            <td><%= patient.age %></td>
+                            <td><%= patient.phone %></td>
+                            <td><%= patient.ailment %></td>
+                            <td><%= patient.apointment %></td>
+                            <td><%= patient.status %></td>
+                            <td><%= link_to "Back", patients_path %></td>
+                            <td><%= link_to "Edit", edit_patient_path(patient)%></td>
+                            <td><%= link_to( "Delete", patient_path(patient), data: {confirm: "Are you sure you want to delete: #{patient.name}?"},method: :delete) %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        <% end %>
     </div>
 </div>
 </div>
