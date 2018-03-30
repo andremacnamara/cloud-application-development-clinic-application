@@ -1,26 +1,83 @@
-<div class="report_info">
-	<h4>Patient Name:</h4>
-	<h5><%= @report.patient.name %></h5>
-	<h4>Ailment: </h4>
-	<h5><%= @report.patient.ailment %></h5>
-	<h4>Age:</h4>
-	<h5><%= @report.patient.age %></h5>
-	<h4>Status:</h4>
-	<h5><%= @report.patient.status %></h5>
-	<br>
-	
+<!-- ============= CARD ============== -->
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card card-default crd">
+                <div class="card-header">Patient Report</div>
+                    <div class="card-body">
+                    	<!-- Patient and Ailment Label-->
+			        	<div class="row">
+			            	<div class="col-md-6">
+			             		<label for="name" class="label">Patient Name</label>
+			            	</div>
+			            	<div class="col-md-6">
+			              		<label for="ailment" class="label">Ailment</label>
+			            	</div>
+			          	</div>
+			          	<!-- Patient and Ailment Data-->
+          				<div class="row">
+            				<div class="col-md-6 content" id="name">
+				            	<%= @report.patient.name %>
+				            	
+				            </div>
+				            <div class="col-md-6 content" id="ailment">
+				            	 <%= @report.patient.ailment %>
+				            </div>
+				        </div>
+				        <!-- Age and Status label -->
+				        <div class="row mt-4">
+			            	<div class="col-md-6">
+			             		<label class="" for="age" class="label">Age</label>
+			            	</div>
+			            	<div class="col-md-6">
+			              		<label for="status" class="label">Status</label>
+			            	</div>
+			          	</div>
+			          	<!-- Patient and Ailment Data-->
+          				<div class="row">
+            				<div class="col-md-6 content" id="age">
+				            	<%= @report.patient.age%>
+				            </div>
+				            <div class="col-md-6 content" id="status">
+				            	 <%= @report.patient.status %>
+				            </div>
+				        </div>
+				        
+				        <!--  Date label -->
+				        <div class="row mt-4">
+			            	<div class="col-md-6">
+			             		<label for="date" class="label">Date</label>
+			            	</div>
+			          	</div>
+			          	
+          				<div class="row">
+				            <div class="col-md-12 content" id="status">
+				            	 <%= @report.date %>
+				            </div>
+				        </div>
+				        
+                       <div class="row mt-4">
+			            	<div class="col-md-6">
+			             		<label for="report" class="label">Report</label>
+			            	</div>
+			          	</div>
+                        <div class="row">
+				            <div class="col-md-12 report" id="report">
+				            	 <%= @report.report %>
+				            </div>
+				        </div>
+                    </div>
+                    <center class="link-btn">
+						<%= link_to "Back", patient_path(@report.patient),class: "button_one" %>
+							<% if signed_in? %>
+								<% if @report.user_id == current_user.id %>
+									<%= link_to "Edit", edit_patient_report_path(@report.patient_id,@report),class: "button_one" %>
+									<%= link_to "Delete", patient_report_path(@report.patient_id,@report), method: :delete, data: {confirm: "Are you sure?"},class: "button_one" %>
+								<% end %>
+							<% end %>
+					</center>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="report_text"> 
-	<h4>Date: <%= @report.date %></h4>
-	<h4><%= @report.report %></h4>
-	<center>
-		<%= link_to "Back", patient_path(@report.patient),class: "button_one" %>
-		<% if signed_in? %>
-			<% if @report.user_id == current_user.id %>
-				<%= link_to "Edit", edit_patient_report_path(@report.patient_id,@report),class: "button_one" %>
-				<%= link_to "Delete", patient_report_path(@report.patient_id,@report), method: :delete, data: {confirm: "Are you sure?"},class: "button_one" %>
-			<% end %>
-		<% end %>
-	</center>
-</div>
-

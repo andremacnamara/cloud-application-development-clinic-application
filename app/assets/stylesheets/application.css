@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
 body {
 	background-color: #fff;
 	font-family: 'Rockwell', serif;
@@ -98,4 +100,25 @@ body {
 	width:70%;
     padding: 10px;
     box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.label {
+	font-size: 1.7rem;
+  	font-weight: 500;
+  	color: hsl(0, 0%, 10%);
+}
+
+.content {
+	font-size: 1.35rem;
+  	font-weight: 300;
+  	color: hsl(0, 0%, 55%);
+}
+
+.report {
+	font-family: 'Lato', sans-serif;
+}
+
+.crd {
+	box-shadow: 3px 3px 3px 3px #888888;
+	margin-bottom: 50px;
 }
