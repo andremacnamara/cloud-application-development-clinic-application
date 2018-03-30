@@ -12,28 +12,24 @@
   <%= link_to "Smart Health", root_path, class: "navbar-brand" %>
 
   <ul class="navbar-nav mr-auto">
-    <li class="nav-item">
-      <%= link_to "Register Doctor", sign_up_path, class: "nav-link" %>
-    </li>
+    
 
     <% if signed_in? %> 
       <li class="nav-item"><%= link_to "Sign out", sign_out_path, method: :delete, class: "nav-link" %></li>
+       
     <% else %> 
       <li class="nav-item"><%= link_to "Login", sign_in_path, class: "nav-link" %></li>
+      <li class="nav-item">
+        <%= link_to "Register Doctor", sign_up_path, class: "nav-link" %>
+      </li>
     <% end %>
-  </ul>
-
-
-  <ul class="navbar-nav ml-auto">
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Sort by Condition</a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="#">Action</a>
-      </div>
-    </li>
+  
 
     <% if signed_in? %> 
       <li class="nav-item"><%= link_to "Your Patients", patients_path(user_id: current_user.id), class: "nav-link" %></li>
+      <li class="nav-item">
+        <a href="/profile" class="nav-link">Profile</a>
+      </li>
     <% else %> 
       <li class="nav-item"><%= link_to "Add Patient", new_patient_path, class: "nav-link" %></li>
     <% end %>

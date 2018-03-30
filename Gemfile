@@ -20,7 +20,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #https://github.com/karmi/retire
 gem 'tire'
 gem 'simple_form', '~> 3.4'
-
+gem 'jquery-turbolinks'
 
 group :development, :test do
   gem 'byebug'

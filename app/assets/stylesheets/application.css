@@ -51,7 +51,8 @@ body {
 }
 
 .edit-button {
-	background-color:DodgerBlue; /* Green */
+	background-color:DodgerBlue; /* Green *= require dataTables/jquery.dataTables
+ */
     border: none;
     color: white;
     padding: 6px 10px;
