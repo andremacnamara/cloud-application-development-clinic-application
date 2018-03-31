@@ -123,3 +123,11 @@ body {
 	box-shadow: 3px 3px 3px 3px #888888;
 	margin-bottom: 50px;
 }
+
+.charts {
+	margin-bottom: 60px;
+}
+
+.chart-labels{
+	margin-bottom: 31px;
+}

@@ -37,7 +37,7 @@ class ReportsController < ApplicationController
 		@report.destroy
 		redirect_to patient_path(@patient)
 	end
-
+	
 	private
 
 		def report_params

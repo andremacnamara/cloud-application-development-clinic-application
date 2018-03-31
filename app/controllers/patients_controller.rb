@@ -52,9 +52,13 @@ class PatientsController < ApplicationController
     redirect_to  patients_path, notice: "Delete Patient #{patient.name}"
   end
   
+  def report 
+    render 'patients/report'
+  end
+  
   private
     def patient_params
-      params.require(:patient).permit(:name, :age, :phone, :ailment, :apointment, :status)
+      params.require(:patient).permit(:name, :age, :phone, :ailment, :apointment, :status, :consultationType)
     end
     
     def find_patient

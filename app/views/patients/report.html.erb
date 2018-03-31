@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="row chart-labels">
+        <div class="col-md-6 text-center">
+            <label class="ml-1" for="patients-illness">A summary of your patients illness's</label>
+        </div>
+        <div class="col-md-6 text-center">
+            <label for="patients-illness-age">Illness to Age</label>
+        </div>
+    </div>
+    <div class="row charts">
+        <div class="col-md-6" id="patients-illness">
+            <%= pie_chart Patient.group(:ailment).count %>
+        </div>
+        <div class="col-md-6" id="patients-illness-age">
+            <%= area_chart Patient.group(:ailment).sum(:age), colors: ["limegreen"]  %>
+        </div>
+    </div>
+    <div class="row chart-labels">
+        <div class="col-md-6 text-center">
+            <label for="patients-status">Patients current status</label>
+        </div>
+        <div class="col-md-6 text-center">
+            <label for="patients-hospital">Patients Hospital</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6" id="patients-status">
+            <%= bar_chart Patient.group(:status).count, colors: ["#8506A9"] %>
+        </div>
+        <div class="col-md-6" id="patients-hospital">
+            <%= pie_chart Patient.group(:consultationType).count %>
+        </div>
+    </div>
+  </div>
+    
+    
+    
