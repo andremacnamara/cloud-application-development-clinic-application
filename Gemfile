@@ -30,6 +30,3 @@ group :development do
   gem 'spring'
 end
 
-group :devlopment, :test do
-  gem 'sqlite3'
-end
