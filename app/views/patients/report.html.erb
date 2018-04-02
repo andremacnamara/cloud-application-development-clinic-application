@@ -9,10 +9,10 @@
     </div>
     <div class="row charts">
         <div class="col-md-6" id="patients-illness">
-            <%= pie_chart Patient.group(:ailment).count %>
+            <%= pie_chart  current_user.patients.group(:ailment).count %>
         </div>
         <div class="col-md-6" id="patients-illness-age">
-            <%= area_chart Patient.group(:ailment).sum(:age), colors: ["limegreen"]  %>
+            <%= area_chart current_user.patients.group(:ailment).sum(:age), colors: ["limegreen"]  %>
         </div>
     </div>
     <div class="row chart-labels">
@@ -25,10 +25,10 @@
     </div>
     <div class="row">
         <div class="col-md-6" id="patients-status">
-            <%= bar_chart Patient.group(:status).count, colors: ["#8506A9"] %>
+            <%= bar_chart current_user.patients.group(:status).count, colors: ["#8506A9"] %>
         </div>
         <div class="col-md-6" id="patients-hospital">
-            <%= pie_chart Patient.group(:consultationType).count %>
+            <%= pie_chart current_user.patients.group(:consultationType).count %>
         </div>
     </div>
   </div>
