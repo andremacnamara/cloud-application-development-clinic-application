@@ -2,11 +2,11 @@
 
 body {
 	background-color: #fff;
-	font-family: 'Rockwell', serif;
+	font-family: 'Sans-serif', serif;
 }
 
 .navbar {
-	font-family: 'Rockwell', sans-serif;
+	font-family: 'Sans-serif', sans-serif;
 	text-transform: uppercase;
 }
 
@@ -130,4 +130,6 @@ body {
 
 .chart-labels{
 	margin-bottom: 31px;
+	font-weight: bold;
+	font-size: 1.1em;
 }

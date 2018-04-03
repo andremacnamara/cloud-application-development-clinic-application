@@ -15,7 +15,10 @@
   This basically means: do what you want with it.
 */
 
-$(document).ready(function(){
+/*global $ */
+/*global sorttable */
+$( document ).on('turbolinks:load', function() {
+//$(window).on('load',function(){
   (function vendorTableSorter(){ 
       
 var stIsIE = /*@cc_on!@*/false;

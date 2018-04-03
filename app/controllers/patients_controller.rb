@@ -9,11 +9,9 @@ class PatientsController < ApplicationController
     else
       @patients = Patient.where(:user_id => params[:user_id])
     end
-    #@patients = current_user.patients.order(:id)
   end
   
   def show
-    #@patient = current_user.patients.find(params[:id])
   end
   
   def new
