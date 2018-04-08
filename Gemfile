@@ -27,10 +27,10 @@ group :development, :test do
   gem 'byebug'
 end
 
-gem 'pg'
+gem 'pg', '~> 0.20'
 
 group :production do
-  gem 'pg'
+  gem 'pg', '~> 0.20'
   gem 'rails_12factor'
 end
 
