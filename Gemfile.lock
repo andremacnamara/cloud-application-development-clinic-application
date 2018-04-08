@@ -102,7 +102,7 @@ GEM
     netrc (0.11.0)
     nokogiri (1.8.2)
       mini_portile2 (~> 2.3.0)
-    pg (0.21.0)
+    pg (0.20.0)
     popper_js (1.12.9)
     rack (1.6.9)
     rack-test (0.6.3)
@@ -211,7 +211,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
-  pg (~> 0.20)
+  pg (~> 0.20.0)
   rails (= 4.2.5)
   rails_12factor
   sass-rails (~> 5.0)
