@@ -27,6 +27,7 @@ group :development, :test do
   gem 'byebug'
 end
 
+gem 'pg'
 
 group :production do
   gem 'pg'
