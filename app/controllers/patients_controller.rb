@@ -3,13 +3,17 @@ class PatientsController < ApplicationController
   before_action :find_patient, only: [:show, :edit, :update, :destroy]
   before_action :require_login
   
-  def index
-    if params[:query].present?
-      @patients = Patient.search(params[:query])
-    else
+#  def index
+    #if params[:query].present?
+     # @patients = Patient.search(params[:query])
+   # else
+   #   @patients = Patient.where(:user_id => params[:user_id])
+  #  end
+ # end
+  
+    def index
       @patients = Patient.where(:user_id => params[:user_id])
     end
-  end
   
   def show
   end
