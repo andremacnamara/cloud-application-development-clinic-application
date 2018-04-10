@@ -16,7 +16,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 #Gem for search
 #https://github.com/karmi/retire
-gem 'tire'
+#gem 'tire'
+gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'simple_form', '~> 3.4'
 gem 'jquery-turbolinks'
 gem "chartkick"

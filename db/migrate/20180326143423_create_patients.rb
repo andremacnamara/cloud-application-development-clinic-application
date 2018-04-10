@@ -6,7 +6,7 @@ class CreatePatients < ActiveRecord::Migration
       t.integer   :age,       null: false
       t.string    :phone,     null: false
       t.string    :ailment,   null: false
-      t.datetime  :apointment,  null: false
+      t.date  :apointment,  null: false
       t.string    :status,    null: false
       
       t.belongs_to :user, null: false, foreign_key: true
