@@ -21,6 +21,9 @@ gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'simple_form', '~> 3.4'
 gem 'jquery-turbolinks'
 gem "chartkick"
+#customgem
+gem 'feeSuggest'
+
 
 group :development, :test do
   gem 'byebug'

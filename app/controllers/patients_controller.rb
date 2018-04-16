@@ -11,10 +11,13 @@ class PatientsController < ApplicationController
   #   end
   # end
   
-  def index
-    @search = Patient.search(params[:q])
-    @patients = @search.result
+def index 
+  @search = Patient.search(params[:q])
+  @patients = @search.result
+  if params[:q].blank?
+    @patients = Patient.where(:user_id => params[:user_id])
   end
+end
   
   def show
   end
@@ -57,6 +60,11 @@ class PatientsController < ApplicationController
   
   def report 
     render 'patients/report'
+  end
+  
+  def price
+     @input1 = params[:search_string]
+     @result = Checkprice.runcheck(@input1.to_i)
   end
   
   private

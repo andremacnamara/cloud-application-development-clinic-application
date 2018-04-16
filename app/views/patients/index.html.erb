@@ -3,19 +3,17 @@
     <div class="text-lead text-center">
         <h1 class="mb-3">Dr <%= current_user.name %>'s patients</h1>
         <%= link_to "New Patient", new_patient_path %>
-
-            <%= search_form_for @search do |f| %>
+<%= search_form_for @search do |f| %>
                 <div class="field">
                     <%= f.label :name_cont, "Name" %>
                     <%= f.text_field :name_cont %>
-                </div>
-                <div class="field">
-                    <%= f.label :apointment_cont, "Apointment" %>
-                    <%= f.date_field(:apointment_cont) %>
                     
+                     <%= f.label :apointment_cont, "Apointment" %>
+                    <%= f.date_field(:apointment_cont) %>
                 </div>
                   <div><%= f.submit %></div>
             <% end %>
+
     </div>
 
     <div class="col-md-12">
@@ -51,7 +49,13 @@
                 </tbody>
             </table>
             <a href="/reporting">Data Charts</a>
+              <h5>Enter a number to check if it is Prime</h5>
+        <%= form_tag "/validateprice" do %>
+        <%= text_field_tag :search_string %>
+        <%= submit_tag "Check Price" %>
         <% end %>
+      
+<% end %>
     </div>
     
 

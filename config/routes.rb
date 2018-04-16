@@ -5,6 +5,8 @@ Rails.application.routes.draw do
     
     get 'profile', to: 'welcome#index'
     get 'reporting', to: 'patients#report'
+    get '/checkprice', :controller=>'patients', :action=>'checkprice'
+    post '/validateprice', :controller=>'patients', :action=>'price'
     resources :patients do
 	    resources :reports
 	end
