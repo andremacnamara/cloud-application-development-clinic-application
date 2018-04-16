@@ -1,19 +1,35 @@
 <div class="container-fluid">
     <div class="text-lead text-center">
-        <h1 class="mb-3">Dr <%= current_user.name %>'s patients</h1>
-        <%= link_to "New Patient", new_patient_path %>
+        <span class="h2 doctor-name">Dr <%= current_user.name %>'s patients</span>
+        
         <%= search_form_for @search do |f| %>
-            <div class="field">
-                <%= f.label :name_cont, "Name" %>
-                <%= f.text_field :name_cont %>
-                
-                <%= f.label :apointment_cont, "Apointment" %>
-                <%= f.date_field(:apointment_cont) %>
+            <div class="search-fields">
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= f.label :name_cont, "Name" %>
+                    </div>
+                    <div class="col-md-6">
+                        <%= f.label :apointment_cont, "Apointment" %>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <%= f.text_field :name_cont %>
+                    </div>
+                    <div class="col-md-6">
+                        <%= f.date_field(:apointment_cont) %>
+                    </div>
+                </div>
             </div>
-            <div><%= f.submit %></div>
+            <div><%= f.submit class: "btn btn-success" %></div>
         <% end %>
     </div>
     
+    <div class="row">
+        <div class="col-md-12">
+            <%= link_to "New Patient", new_patient_path, class: "btn btn-primary " %>
+        </div>
+    </div>
     <div class="col-md-12">
         <% if @patients.count ==0 %>
 		    <center><h3>There are no patients</h3></center>
@@ -27,6 +43,7 @@
                     <th>Ailment</th>
                     <th>Apointment</th>
                     <th>Status</th>
+                    <th>Hospital</th>
                     <th></th>
                   </tr>
                 </thead>
@@ -39,6 +56,7 @@
                             <td><%= patient.ailment %></td>
                             <td><%= patient.apointment %></td>
                             <td><%= patient.status %></td>
+                            <td><%= patient.consultationType %></td>
                             <td><%= link_to "Back", patients_path %></td>
                             <td><%= link_to "Edit", edit_patient_path(patient)%></td>
                             <td><%= link_to( "Delete", patient_path(patient), data: {confirm: "Are you sure you want to delete: #{patient.name}?"},method: :delete) %></td>
@@ -46,13 +64,19 @@
                     <% end %>
                 </tbody>
             </table>
-            <a href="/reporting">Data Charts</a>
-            <h5>Enter a number to check if it is Prime</h5>
-                <%= form_tag "/validateprice" do %>
-                    <%= text_field_tag :search_string %>
-                    <%= submit_tag "Check Price" %>
-                <% end %>
-            <% end %>
-        </div>
-    </div>
+            <div class="price">
+                <div class="row">
+                    <span class="text-muted">Get a price estimate</span>
+                </div>
+                <div class="row">
+                    <%= form_tag "/validateprice" do %>
+                        <%= text_field_tag :search_string, nil, :placeholder => "Level between 1 - 5" %>
+                        <%= submit_tag "Check Price" %>
+                    <% end %>
+                </div>
+            </div>
+        
+    <% end %>
+</div>
+</div>
 </div>

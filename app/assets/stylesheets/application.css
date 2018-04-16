@@ -1,21 +1,22 @@
 @import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import "bootstrap";
 
 body {
 	background-color: #fff;
-	font-family: 'Sans-serif', serif;
+	font-family: 'Lato', serif;
 }
 
 .navbar {
-	font-family: 'Sans-serif', sans-serif;
-	text-transform: uppercase;
+	font-family: 'Lato', sans-serif;
 }
 
-.navbar-default {
-	background-color: #65737e;
+.navbar-bg {
+	background-color: #2a7bcc;
 	padding-bottom: 5px;
 }
 
-.navbar-nav > li > a {
+.navbar-nav > li > a,
+.navbar-brand{
 		color: #fff;
   
 }
@@ -132,4 +133,32 @@ body {
 	margin-bottom: 31px;
 	font-weight: bold;
 	font-size: 1.1em;
+}
+
+.doctor-name {
+	font-weight: 300;
+}
+
+.btn-primary {
+	background-color: #478acc;
+}
+
+.btn-primary:hover{
+	background-color: royalblue;
+}
+
+.btn {
+	margin-bottom: -30px;
+}
+
+.search-fields {
+	margin-top: 70px;
+}
+
+.price {
+	margin: auto;
+    width: 50%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	
 }

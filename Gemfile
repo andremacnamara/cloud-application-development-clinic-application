@@ -9,14 +9,12 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 #Authentication Gem -> https://github.com/thoughtbot/clearance
 gem 'clearance', '~> 1.16.1'
-gem 'bootstrap'
+gem 'bootstrap', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-#Gem for search
-#https://github.com/karmi/retire
-#gem 'tire'
+
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'simple_form', '~> 3.4'
 gem 'jquery-turbolinks'

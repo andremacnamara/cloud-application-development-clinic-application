@@ -1,5 +1,4 @@
-The price is<br>
-<%= @input1 %> is <%= @result %>
+<span class="lead text-center">The estimated price for a level <strong><%= @input1 %></strong> injury, is approximately <strong><%= @result %></strong> </span>
 <hr>
 
-<a href="/patients">Back to Patients</a>
+<%= link_to "Back to patients", patients_path(user_id: current_user.id), class: "nav-link" %>
