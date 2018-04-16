@@ -1,9 +1,5 @@
 class Patient < ActiveRecord::Base
     
-    # include Tire::Model::Search
-    # include Tire::Model::Callbacks
-
-    
     validates :name, presence:true
     validates :age, presence:true
     validates :phone, presence:true

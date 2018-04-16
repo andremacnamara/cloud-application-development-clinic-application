@@ -3,6 +3,7 @@ class ReportsController < ApplicationController
     before_action :find_patient
 	before_action :find_report, only: [:show, :edit, :update, :destroy]
 	before_action :require_login
+	
 	def new
 		@reports = Report.new 
 	end 
