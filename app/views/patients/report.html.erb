@@ -13,7 +13,7 @@
             <%= pie_chart  current_user.patients.group(:ailment).count %>
         </div>
          <div class="col-md-6" id="patients-hospital">
-            <%= pie_chart  current_user.patients.group(:consultationType).count %>
+            <%= pie_chart  current_user.patients.group(:age).count %>
         </div>
     </div>
     <div class="row chart-labels text-muted">
