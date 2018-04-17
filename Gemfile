@@ -15,7 +15,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack'
 gem 'simple_form', '~> 3.4'
 gem 'jquery-turbolinks'
 gem "chartkick"
@@ -33,7 +33,7 @@ group :development do
   gem 'sqlite3'
 end
 
-group :test, :production do
+group :production do
     gem 'pg'
 end
 
