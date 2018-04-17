@@ -199,6 +199,7 @@ DEPENDENCIES
   jquery-rails
   jquery-turbolinks
   pg (~> 0.21.0)
+  popper_js (~> 1.12.9)
   rails (= 4.2.5)
   rails_12factor
   ransack
