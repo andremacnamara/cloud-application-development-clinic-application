@@ -20,11 +20,6 @@
 
 //= require bootstrap-sprockets
 //= require turbolinks
-//= require_tree .
-//= require Chart.bundle
-//= require chartkick
+//= require_tree 
 //= require highcharts
 //= require chartkick
-
-
-
