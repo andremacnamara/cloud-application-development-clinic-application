@@ -13,18 +13,18 @@
 // about supported directives.
 //
 
-
-//= require Chart.bundle
-//= require chartkick
-
-
 //= require jquery
 //= require jquery_ujs
+//= require popper
 //= require turbolinks
 
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+//= require Chart.bundle
+//= require chartkick
+//= require highcharts
+//= require chartkick
 
 
 
