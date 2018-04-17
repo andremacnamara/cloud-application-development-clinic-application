@@ -8,48 +8,106 @@
     </div>
 <% end %>
 
-<%= form_for @patient do |form| %>
-    <div class="form-control">
-        <div class="form-group">
-            <%= form.label :name %>
-            <%= form.text_field :name %>
-        </div>
-        <div class="form-group">
-            <%= form.label :age %>
-            <%= form.text_field :age %>
-        </div>
-        <div class="form-group">
-            <%= form.label :phone %>
-            <%= form.text_field :phone %>
-        </div>
-        <div class="form-group">
-            <%= form.label :ailment %>
-            <%= form.text_field :ailment %>
-        </div>
-        <div class="form-group">
-            <%= form.label :appointment %>
-            <%= date_field(:patient, :apointment) %>
-        </div>
-        <div class="form-group">
-            <%= form.label :status %>
-            <%= form.select :status, ["Initial Consultation", "Prescribed Medication", "Refered On", "Awaiting Follow Up", "Critical"] %>
-        </div>
-        <div class="form-group">
-            <%= form.label :consultationType %>
-            <%= form.select :consultationType, 
-                [
-                    "N/A",
-                    "Inhouse-Clinic",
-                    "St.James Hospital - X-Ray",
-                    "Matter Private Dublin - Cardiology",
-                    "Matter Private Cork - Neurology",
-                    "Royal Eye and Ear - Ophthalmology",
-                    "Temple Street - Children"
-                ] 
-            %>
-        </div>
-        <div class="actions">
-            <%= form.submit %>
-        </div>
-    </div>
-<% end %>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card card-default">
+                <div class="card-header">
+                    <div class="text-lead h5">
+                        Add Patient
+                    </div>
+                </div>
+                <div class="card-body">
+                    <%= form_for @patient do |form| %>
+                    
+                        <!-- Name Row-->
+                        <div class="form-group row">
+                            <%= form.label :name, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= form.text_field :name, :class => 'form-control' %>
+                            </div>
+                        </div>
+                        
+                        <!-- Age Row-->
+                        <div class="form-group row">
+                            <%= form.label :age, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= form.text_field :age, :class => 'form-control' %>
+                          </div>
+                        </div>
+                        
+                        <!-- Phone Row-->
+                        <div class="form-group row">
+                            <%= form.label :phone, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= form.text_field :phone, :class => 'form-control' %>
+                            </div>
+                        </div>
+                        
+                        <!-- Ailment Row -->
+                        <div class="form-group row">
+                            <%= form.label :ailment, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= form.text_field :ailment, :class => 'form-control' %>
+                            </div>
+                        </div>
+                        
+                        <!-- Appointment Row-->
+                        <div class="form-group row">
+                            <%= form.label :appointment, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= date_field(:patient, :apointment, class: "form-control") %>
+                            </div>
+                        </div>
+                        
+                        <!-- Status Row-->
+                        <div class="form-group row">
+                            <%= form.label :status, :class => 'col-md-3 col-form-label text-md-right' %>
+                            <div class="col-md-9">
+                                <%= form.select :status, 
+                                    [
+                                        ["Initial Consultation"], 
+                                        ["Prescribed Medication"],
+                                        ["Refered On"],
+                                        ["Awaiting Follow Up"],
+                                        ["Critical"],
+                                    ],
+                                    {},
+                                    {class: "form-control"} 
+                                %>
+                            </div>
+                        </div>
+                        
+                        <!-- Consultation Row-->
+                        <div class="form-group row">
+                            <%= form.label :consultationType, :class => "col-md-3 col-form-label text-md-right" %>
+                            <div class="col-md-9">
+                                <%= form.select :consultationType, 
+                                    [
+                                        ["N/A"],
+                                        ["Inhouse-Clinic"],
+                                        ["St.James Hospital - X-Ray"],
+                                        ["Matter Private Dublin - Cardiology"],
+                                        ["Matter Private Cork - Neurology"],
+                                        ["Royal Eye and Ear - Ophthalmology"],
+                                        ["Temple Street - Children"],
+                                    ], 
+                                    {},
+                                    {class: "form-control"} 
+                                %>
+                            </div>
+                        </div>
+                        
+                        <!-- Button Row-->
+                        <div class="form-group row mb-4">
+                            <div class="col-md-6 offset-md-4 mt-2">
+                                <%= form.submit %>
+                            </div>
+                        </div>
+                    <% end %>
+                </div><!-- ./ CARD BODY-->
+            </div> <!-- ./ CARD -->
+        </div> <!-- ./ COL-8 -->
+    </div> <!-- ./ ROW -->
+</div> <!-- ./ Container-->
+

@@ -1,1 +1,13 @@
-<h1>Welcome</h1>
+<div class="card">
+  <h5 class="card-header text-center">Welcome to the Clinics Patient Management System</h5>
+  <div class="card-body text-center">
+      <% if signed_in? %>
+        <h5 class="card-title">Welcome <strong>Dr. <%= current_user.name %></strong></h5>
+        <h5 class="card-title">Please proceed to your patients overview page</h5>
+        <span class="text-muted"><%= link_to "Your Patients", patients_path(user_id: current_user.id) %></span>
+      <% else %>
+      <h5 class="card-title"><%= link_to "Please Login", sign_in_path, class: "nav-link" %></h5>
+      <% end %>
+    <p class="card-text mt-4">Have a good day.</p>
+  </div>
+</div>

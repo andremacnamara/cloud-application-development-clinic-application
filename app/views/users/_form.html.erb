@@ -1,19 +1,46 @@
-<div class="text-field">
-  <%= form.label :name %>
-  <%= form.text_field :name, type: 'text' %>
-</div>
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card card-default">
+                <div class="card-header">
+                    <div class="text-lead h5">
+                        Sign Up
+                    </div>
+                </div>
+                <div class="card-body">
+                  
+                  <div class="form-group row">
+                    <%= form.label :name, :class => 'col-md-3 col-form-label text-md-right'  %>
+                    <div class="col-md-9">
+                      <%= form.text_field :name, type: 'text', :class => 'form-control' %>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <%= form.label :clinicAddresss, :class => 'col-md-3 col-form-label text-md-right'  %>
+                    <div class="col-md-9">
+                      <%= form.text_field :clinicAddresss, type: 'text', :class => 'form-control' %>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <%= form.label :email, :class => 'col-md-3 col-form-label text-md-right'  %>
+                    <div class="col-md-9">
+                      <%= form.text_field :email, type: 'email', :class => 'form-control' %>
+                    </div>
+                  </div>
+                  
+                  <div class="form-group row">
+                    <%= form.label :password, :class => 'col-md-3 col-form-label text-md-right'  %>
+                    <div class="col-md-9">
+                      <%= form.password_field :password, :class => 'form-control' %>
+                    </div>
+                </div>
+            </div><!-- ./ CARD BODY-->
+        </div> <!-- ./ CARD -->
+    </div> <!-- ./ COL-8 -->
+  </div> <!-- ./ ROW -->
+</div> <!-- ./ Container-->
 
-<div class="text-field">
-  <%= form.label :clinicAddresss %>
-  <%= form.text_field :clinicAddresss, type: 'text' %>
-</div>
 
-<div class="text-field">
-  <%= form.label :email %>
-  <%= form.text_field :email, type: 'email' %>
-</div>
-
-<div class="password-field">
-  <%= form.label :password %>
-  <%= form.password_field :password %>
-</div>
+              

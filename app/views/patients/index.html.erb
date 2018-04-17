@@ -1,27 +1,30 @@
 <div class="container-fluid">
     <div class="text-lead text-center">
-        <span class="h2 doctor-name">Dr <%= current_user.name %>'s patients</span>
+        <span class="h2 doctor-name mb-4">Dr <%= current_user.name %>'s patients</span>
         
         <%= search_form_for @search do |f| %>
+            <span class="text-muted mt-4">Search by patient and/or appointment date</span>
             <div class="search-fields">
-                <div class="row">
-                    <div class="col-md-6">
-                        <%= f.label :name_cont, "Name" %>
-                    </div>
-                    <div class="col-md-6">
-                        <%= f.label :apointment_cont, "Apointment" %>
-                    </div>
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <%= f.label :name_cont, "Name" %>
+                  </div>
+                  <div class="col-md-6">
+                    <%= f.label :apointment_cont, "Apointment" %>
+                  </div>
                 </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <%= f.text_field :name_cont %>
-                    </div>
-                    <div class="col-md-6">
-                        <%= f.date_field(:apointment_cont) %>
-                    </div>
+                <div class="row no-gutters">
+                  <div class="col-md-6">
+                    <%= f.text_field :name_cont %>
+                  </div>
+                  <div class="col-md-6">
+                    <%= f.date_field(:apointment_cont) %>
+                  </div>
                 </div>
             </div>
-            <div><%= f.submit class: "btn btn-success" %></div>
+            <div>
+                <%= f.submit class: "btn btn-success search-btn" %>
+            </div>
         <% end %>
     </div>
     

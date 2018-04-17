@@ -137,6 +137,7 @@ body {
 
 .doctor-name {
 	font-weight: 300;
+	/*margin-bottom: 20px*/
 }
 
 .btn-primary {
@@ -152,7 +153,11 @@ body {
 }
 
 .search-fields {
-	margin-top: 70px;
+	margin-top: 40px;
+}
+
+.search-btn {
+	margin-top: 30px;
 }
 
 .price {
@@ -160,5 +165,12 @@ body {
     width: 50%;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	
+}
+
+.report-title {
+	margin-bottom: 80px;
+}
+
+#patients-status {
+	margin-bottom: 50px;
 }
