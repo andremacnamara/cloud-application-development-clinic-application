@@ -20,4 +20,5 @@
 //= require bootstrap-sprockets
 //= require_tree 
 //= require highcharts
+//= require Chart.bundle
 //= require chartkick
