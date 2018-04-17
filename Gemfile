@@ -21,7 +21,6 @@ gem 'jquery-turbolinks'
 gem "chartkick"
 #customgem
 gem 'feeSuggest', '~> 0.0.0'
-gem 'popper_js', '~> 1.12.9'
 
 group :development, :test do
   gem 'byebug'
