@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import "bootstrap";
+
+body {
+	background-color: #fff;
+	font-family: 'Lato', serif;
+}
+
+.navbar {
+	font-family: 'Lato', sans-serif;
+}
+
+.navbar-bg {
+	background-color: #2a7bcc;
+	padding-bottom: 5px;
+}
+
+.navbar-nav > li > a,
+.navbar-brand{
+		color: #fff;
+  
+}
+
+.navbar-nav>li> a:hover {
+			color: #20B2AA;
+			transition: 0.5s;
+}
+
+.navbar-header .navbar-brand {
+			color: #fff;
+			letter-spacing: 1.4px;
+  
+}
+.navbar-header .navbar-brand:hover {
+				color: #20B2AA;
+				transition: 0.5s;
+}
+
+	.dropdown-menu > li > a:hover {
+		background-color: #20B2AA;
+		color: #fff;
+	}
+
+	.navbar-nav > .open > a, .navbar-nav > .open > a:hover, .navbar-nav > .open > a:focus {
+		background-color: #20B2AA;
+		color: #fff;	
+	}
+
+.dropdown-menu > .active > a {
+	background-color: #20B2AA;
+	color: #fff;
+}
+
+.edit-button {
+	background-color:DodgerBlue; /* Green *= require dataTables/jquery.dataTables
+ */
+    border: none;
+    color: white;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 12px;
+}
+
+.patient-list {
+	margin-top: 5%;
+}
+
+.table thead th {
+	font-size: 1.25rem;
+  	font-weight: 500;
+  	color: hsl(0, 0%, 15%);
+}
+
+.table tbody td {
+	color: hsl(0, 0%, 35%);
+	font-weight: 400;
+}
+
+.table tbody td a {
+	color: #0000FF;
+	font-weight: 400;
+}
+
+.show-table tbody td a {
+	color: hsl(0, 0%, 15%);
+	font-weight: 300;
+	text-decoration: underline;
+	font-style: italic;
+}
+
+.show-table tbody td a:hover {
+	color: tomato;
+	font-weight: 500;
+	font-style: bold;
+}
+
+.report-table {
+	margin: 0 auto; 
+	width:70%;
+    padding: 10px;
+    box-shadow: 5px 5px 5px 5px #888888;
+}
+
+.label {
+	font-size: 1.7rem;
+  	font-weight: 500;
+  	color: hsl(0, 0%, 10%);
+}
+
+.content {
+	font-size: 1.35rem;
+  	font-weight: 300;
+  	color: hsl(0, 0%, 55%);
+}
+
+.report {
+	font-family: 'Lato', sans-serif;
+}
+
+.crd {
+	box-shadow: 3px 3px 3px 3px #888888;
+	margin-bottom: 50px;
+}
+
+.charts {
+	margin-bottom: 60px;
+}
+
+.chart-labels{
+	margin-bottom: 31px;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.doctor-name {
+	font-weight: 300;
+	/*margin-bottom: 20px*/
+}
+
+.btn-primary {
+	background-color: #478acc;
+}
+
+.btn-primary:hover{
+	background-color: royalblue;
+}
+
+.btn {
+	margin-bottom: -30px;
+}
+
+.search-fields {
+	margin-top: 40px;
+}
+
+.search-btn {
+	margin-top: 30px;
+}
+
+.price {
+	margin: auto;
+    width: 50%;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.report-title {
+	margin-bottom: 80px;
+}
+
+#patients-status {
+	margin-bottom: 50px;
+}
