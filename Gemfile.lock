@@ -194,7 +194,7 @@ DEPENDENCIES
   chartkick
   clearance (~> 1.16.1)
   coffee-rails (~> 4.1.0)
-  feeSuggest
+  feeSuggest (~> 0.0.0)
   jbuilder (~> 2.0)
   jquery-rails
   jquery-turbolinks
